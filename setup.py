@@ -7,7 +7,7 @@ import os
 def get_version():
     fn = os.path.join(os.path.dirname(__file__), "autopager", "__init__.py")
     with open(fn) as f:
-        return re.findall("__version__ = '([\d\.\w]+)'", f.read())[0]
+        return re.findall(r"__version__ = '([\d\.\w]+)'", f.read())[0]
 
 
 setup(
@@ -21,8 +21,8 @@ setup(
     url='https://github.com/TeamHG-Memex/autopager',
     zip_safe=False,
     packages=['autopager'],
+    python_requires='>=3.8',
     install_requires=[
-        "six",
         "w3lib >= 1.13.0",
         "parsel >= 1.0.1",
         "tldextract",
@@ -52,11 +52,11 @@ setup(
         'Intended Audience :: Developers',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
     ],
 )
