@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import  
 import pytest
 
 from autopager.utils import normalize_whitespaces, ngrams, normalize

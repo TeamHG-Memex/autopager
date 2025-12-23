@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import
 import os
 
 import autopager
@@ -8,7 +6,7 @@ from autopager.autopager import train_crf
 
 DATA_PATH = os.path.join(os.path.dirname(__file__), '..', 'autopager', 'data')
 
-PAGE = u"""
+PAGE = """
 <html>
     <body>
         Pages:

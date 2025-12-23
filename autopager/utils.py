@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import
 import re
 from itertools import chain
 
@@ -76,5 +74,5 @@ def replace_digits(text, repl='X'):
     >>> replace_digits("hello, 123!")
     'hello, XXX!'
     """
-    return re.sub('\d', repl, text)
+    return re.sub(r'\d', repl, text)
 

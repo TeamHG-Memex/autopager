@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
 AutoPager command-line utility.
 
@@ -10,7 +9,6 @@ Usage:
 
 To train the autopager use "train" command.
 """
-from __future__ import absolute_import, print_function
 import docopt
 import autopager
 from autopager.autopager import train_crf

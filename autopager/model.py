@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 
 XXX: also tried, but not present in the final model:
@@ -20,13 +19,12 @@ XXX: also tried, but not present in the final model:
 
 
 """
-from __future__ import absolute_import
 
 import re
 from itertools import islice
 
 import sklearn_crfsuite
-from six.moves.urllib.parse import urlsplit, parse_qsl
+from urllib.parse import urlsplit, parse_qsl
 
 from autopager.htmlutils import (
     get_link_text,
@@ -108,7 +106,7 @@ def link_to_features(link):
         'path-has-pageXX': re.search(r'[/-](?:p|page\w?)/?\d+', p.path.lower()) is not None,
         'path-has-number': any(part.isdigit() for part in p.path.split('/')),
 
-        'href-has-year': re.search('20\d\d', href) is not None,
+        'href-has-year': re.search(r'20\d\d', href) is not None,
     }
 
     # Unused features

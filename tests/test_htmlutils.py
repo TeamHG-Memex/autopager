@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import
 import parsel
 from autopager.htmlutils import (
     get_links_loose,
@@ -10,7 +8,7 @@ from autopager.htmlutils import (
 
 
 def test_get_links_loose():
-    sel = parsel.Selector(u"""
+    sel = parsel.Selector("""
     <html>
         <div><a id=1></a></div>
         <a id=2><div></div></a>
@@ -22,7 +20,7 @@ def test_get_links_loose():
 
 
 def test_xseq_yseq():
-    html = u"""
+    html = """
     <html>
         <div><a href="/" id=1></a></div>
         <a href="/" id=2><div></div></a>
@@ -51,7 +49,7 @@ def test_get_link_text():
 
 
 def test_get_text_around_selector_list():
-    sel = parsel.Selector(u"""
+    sel = parsel.Selector("""
         <form>
             <h1>Login</h1>
             Please <b>enter</b> your details

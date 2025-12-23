@@ -1,7 +1,4 @@
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import
 import os
-import io
 import csv
 import parsel
 
@@ -39,7 +36,7 @@ class Storage(object):
 
     def iter_records(self):
         info_path = os.path.join(self.path, 'data.csv')
-        with io.open(info_path, encoding='utf8') as f:
+        with open(info_path, encoding='utf8') as f:
             for row in csv.DictReader(f):
                 if row['failed']:
                     continue
@@ -48,5 +45,5 @@ class Storage(object):
     def _load_html(self, row):
         data_path = os.path.join(self.path, 'html')
         path = os.path.join(data_path, row['File Name'] + ".html")
-        with io.open(path, encoding=row['Encoding']) as f:
+        with open(path, encoding=row['Encoding']) as f:
             return f.read()
