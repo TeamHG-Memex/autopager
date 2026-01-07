@@ -1,0 +1,15 @@
+./setup.py
+./autopager/limits.py
+./autopager/__main__.py
+./autopager/autopager.py
+./autopager/utils.py
+./autopager/__init__.py
+./autopager/model.py
+./autopager/htmlutils.py
+./autopager/storage.py
+./AGENTS.md
+./_release.sh
+./tests/test_storage.py
+./tests/test_autopager.py
+./tests/test_utils.py
+./tests/test_htmlutils.py
