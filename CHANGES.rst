@@ -1,6 +1,18 @@
 Changes
 =======
 
+0.4.0 (TBD)
+-----------
+
+* Minimum Python requirement is now 3.8
+* Dropped Python 2 support
+* Removed `six` dependency - using native Python 3 features
+* Removed `from __future__` imports (not needed in Python 3)
+* Removed `# -*- coding: utf-8 -*-` headers (default in Python 3)
+* Replaced `io.open` with built-in `open`
+* Fixed regex warnings by using raw strings
+* Updated CI to test Python 3.8-3.12
+
 0.3.1 (2020-09-09)
 ------------------
 

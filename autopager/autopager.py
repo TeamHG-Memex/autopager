@@ -1,9 +1,6 @@
-# -*- coding: utf-8 -*-
-from __future__ import absolute_import
 import os
-import six
-from six.moves.urllib.parse import urljoin
-import six.moves.cPickle as pickle
+import pickle
+from urllib.parse import urljoin
 
 import parsel
 from autopager.htmlutils import get_links
@@ -128,7 +125,7 @@ def _any2selector(data):
     if isinstance(data, bytes):
         raise ValueError("binary data is not supported")
 
-    if isinstance(data, six.text_type):
+    if isinstance(data, str):
         return parsel.Selector(text=data)
 
     # scrapy.Response support
